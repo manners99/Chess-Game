@@ -1,7 +1,7 @@
 package Pieces;
 public class Queen implements Piece {
 
-    public String colour;
+    private String colour;
     
 
     public Queen(String colour) {
@@ -18,6 +18,10 @@ public class Queen implements Piece {
     public void capture() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'capture'");
+    }
+
+    public String getColour() {
+        return colour;
     }
     
 }

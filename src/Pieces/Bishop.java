@@ -1,6 +1,12 @@
 package Pieces;
 public class Bishop implements Piece {
 
+    private String colour;
+
+    public Bishop(String pieceColour) {
+        this.colour = pieceColour;
+    }
+
     @Override
     public void move() {
         // TODO Auto-generated method stub
@@ -11,6 +17,10 @@ public class Bishop implements Piece {
     public void capture() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'capture'");
+    }
+
+    public String getColour() {
+        return colour;
     }
     
 }

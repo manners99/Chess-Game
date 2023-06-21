@@ -18,5 +18,9 @@ public class Rook implements Piece {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'capture'");
     }
+
+    public String getColour() {
+        return colour;
+    }
     
 }
