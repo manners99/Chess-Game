@@ -1,7 +1,14 @@
 package Pieces;
-public interface Piece {
+public abstract class Piece {
+
+    protected String colour;
     
-    public void move();
-    public void capture();
+    public void move(){
+        throw new UnsupportedOperationException("Unimplemented method 'move'");
+    }
+
+    public void capture(){
+
+    }
      
 }
