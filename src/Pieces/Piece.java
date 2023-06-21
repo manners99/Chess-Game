@@ -1,7 +1,7 @@
 package Pieces;
 public abstract class Piece {
 
-    protected String colour;
+    protected boolean isWhite;
     
     public void move(){
         throw new UnsupportedOperationException("Unimplemented method 'move'");
@@ -11,8 +11,8 @@ public abstract class Piece {
         throw new UnsupportedOperationException("Unimplemented method 'capture'");
     }
 
-    public String getColour(){
-        return this.colour;
+    public boolean getColour(){
+        return this.isWhite;
     }
      
 }

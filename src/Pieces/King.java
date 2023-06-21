@@ -1,8 +1,8 @@
 package Pieces;
 public class King extends Piece {
 
-    public King(String pieceColour) {
-        this.colour = pieceColour;
+    public King(boolean pieceColour) {
+        this.isWhite = pieceColour;
     }
     
 }

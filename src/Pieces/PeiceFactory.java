@@ -1,6 +1,6 @@
 package Pieces;
 public class PeiceFactory {
-    public static Piece createPeice(String pieceType, String pieceColour) {
+    public static Piece createPeice(String pieceType, boolean pieceColour) {
 
         switch (pieceType) {
             case "King":

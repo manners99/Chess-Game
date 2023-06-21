@@ -1,8 +1,8 @@
 package Pieces;
 public class Bishop extends Piece {
 
-    public Bishop(String pieceColour) {
-        this.colour = pieceColour;
+    public Bishop(boolean pieceColour) {
+        this.isWhite = pieceColour;
     }
    
 }

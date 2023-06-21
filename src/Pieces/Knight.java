@@ -1,7 +1,7 @@
 package Pieces;
 public class Knight extends Piece{
 
-    public Knight(String pieceColour) {
-        this.colour = pieceColour;
+    public Knight(Boolean pieceColour) {
+        this.isWhite = pieceColour;
     } 
 }
