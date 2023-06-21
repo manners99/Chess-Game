@@ -8,7 +8,11 @@ public abstract class Piece {
     }
 
     public void capture(){
+        throw new UnsupportedOperationException("Unimplemented method 'capture'");
+    }
 
+    public String getColour(){
+        return this.colour;
     }
      
 }
