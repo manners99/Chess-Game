@@ -13,9 +13,18 @@ public class Space {
         this.X = X;
         this.Y = Y;
     }
+    
+    @Override
+    public String toString() {
+        if (this.piece == null) {
+            return "  ";
+        } else {
+            return this.piece.toString();
+        }
+    }
 
     public Piece getPiece() {
-        return piece;
+        return this.piece;
     }
 
     public void setPiece(Piece piece) {
@@ -23,19 +32,19 @@ public class Space {
     }
 
     public int getX() {
-        return X;
+        return this.X;
     }
 
     public void setX(int x) {
-        X = x;
+        this.X = x;
     }
 
     public int getY() {
-        return Y;
+        return this.Y;
     }
 
     public void setY(int y) {
-        Y = y;
+        this.Y = y;
     }
     
 }
