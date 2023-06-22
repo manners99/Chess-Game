@@ -46,8 +46,17 @@ public class ChessBoard {
                 spots[i][j] = new Space(null, i ,j);
             }
         }
+    }
 
-
-        return;
+    public void printBoard() {
+        for (int i = 0; i < 8; i++) {
+            System.out.print("|");
+            for (int j = 0; j < 8; j++) {
+                System.out.print(spots[i][j].toString() + "|");
+            }
+            System.out.println("  " + (8 - i));
+        }
+        
+        System.out.println(" a  b  c  d  e  f  g  h");
     }
 }
