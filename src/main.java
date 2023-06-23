@@ -2,7 +2,7 @@ public class Main {
 
     public enum Colour {
         WHITE,
-        BLACK
+        BLACK;
     }
 
     public enum PieceType {
@@ -10,7 +10,8 @@ public class Main {
         BISHOP,
         ROOK,
         QUEEN,
-        KING
+        KING,
+        PAWN;
     }
 
     public enum Location {
