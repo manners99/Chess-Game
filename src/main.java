@@ -34,11 +34,52 @@ public class Main {
 
         private final String message;
         private final int numArgs;
+        private final String[] prompts;
 
         private Command(final int numArgs, final String message) {
+            //use the priincipal of constuctor chaining to call the other constructor
+            this(numArgs, message, new String[] {});// use a empty string array for the missing variables
+        }
+
+        private Command(final int numArgs, final String message, final String[] prompts) {
             this.numArgs = numArgs;
             this.message = message;
+            this.prompts = prompts;
         }
+
+        public boolean hasArgs() {
+            return this.numArgs > 0;
+        }
+
+        public int getNumArgs() {
+            return this.numArgs;
+        }
+
+        public boolean hasPrompts() {
+            return this.prompts.length > 0;
+        }
+
+        public String getPrompts(int index) {
+            return this.prompts[index];
+        }
+
+
+    }
+
+    private static void printBanner() {
+        // https://patorjk.com/software/taag/
+        // Font: Blocks
+        // https://www.freeformatter.com/java-dotnet-escape.html#before-output
+        System.out.println(" .----------------.  .----------------.  .----------------.  .----------------.  .----------------. "
+        + "\r\n| .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |\r\n| "
+        + "|     ______   | || |  ____  ____  | || |  _________   | || |    _______   | || |    _______   | |\r\n| |   .' ___  |  | |"
+        + "| | |_   ||   _| | || | |_   ___  |  | || |   /  ___  |  | || |   /  ___  |  | |\r\n| |  / .'   \\_|  | || |   | |__| |   | |"
+        + "| |   | |_  \\_|  | || |  |  (__ \\_|  | || |  |  (__ \\_|  | |\r\n| |  | |         | || |   |  __  |   | || |   |  _|  _   | "
+        + "|| |   '.___`-.   | || |   '.___`-.   | |\r\n| |  \\ `.___.'\\  | || |  _| |  | |_  | || |  _| |___/ |  | || |  |`\\____) |  | "
+        + "|| |  |`\\____) |  | |\r\n| |   `._____.'  | || | |____||____| | || | |_________|  | || |  |_______.'  | || |  |_______.'  | |\r"
+        + "\n| |              | || |              | || |              | || |              | || |              | |\r\n| '--------------' ||"
+        + " '--------------' || '--------------' || '--------------' || '--------------' |\r\n '----------------'  '----------------'  "
+        + "'----------------'  '----------------'  '----------------' ");
     }
     
 }
