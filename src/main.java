@@ -30,7 +30,9 @@ public class Main {
         MOVE(2, "Move you piece <LOCATION_FROM> <LOCATION_TO>"),
         SAVE_GAME(0, "Save the current game"),
         RESIGN(1, "Resign <COLOUR_RESIGNING>"),
-        DRAW(0, "Propose a draw to your opponent");
+        DRAW(0, "Propose a draw to your opponent"),
+        EXIT(0, "Exit the terminal");
+
 
 
         private final String message;
@@ -60,11 +62,25 @@ public class Main {
             return this.prompts.length > 0;
         }
 
+        public int getNumPrompts() {
+            return this.prompts.length;
+        }
+
         public String getPrompts(int index) {
             return this.prompts[index];
         }
+    }
 
+    private static final String COMMAND_PREFIX = "Chess> ";
 
+    public Main(Object chess) {
+    }
+
+    public static void main(String[] args) {
+        new Main(new Chess()).run();
+    }
+
+    private void run() {
     }
 
     private static void printBanner() {
