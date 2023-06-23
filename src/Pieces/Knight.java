@@ -8,5 +8,6 @@ public class Knight extends Piece{
         } else {
             this.pieceName = "bN";
         }
+        this.pieceType = PieceType.KNIGHT;
     } 
 }

@@ -8,6 +8,7 @@ public class Queen extends Piece {
         } else {
             this.pieceName = "bQ";
         }
+        this.pieceType = PieceType.QUEEN;
     }
 
 }

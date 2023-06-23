@@ -1,8 +1,14 @@
 package Pieces;
+
+import Players.Player;
+
 public abstract class Piece {
 
     protected boolean isWhite;
     protected String pieceName;
+    protected PieceType pieceType;
+    protected Player colour;
+
     
     public void move(){
         throw new UnsupportedOperationException("Unimplemented method 'move'");
@@ -23,5 +29,9 @@ public abstract class Piece {
 
     public String getSimpleName(){
         return this.pieceName;
+    }
+
+    public PieceType getPieceType(){
+        return this.pieceType;
     }
 }

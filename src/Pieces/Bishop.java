@@ -8,6 +8,7 @@ public class Bishop extends Piece {
         } else {
             this.pieceName = "bB";    
         }
+        this.pieceType = PieceType.BISHOP;
     }
    
 }

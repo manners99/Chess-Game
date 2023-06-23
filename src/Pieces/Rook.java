@@ -9,6 +9,7 @@ public class Rook extends Piece {
         } else {
             this.pieceName = "bR";
         }
+        this.pieceType = PieceType.ROOK;
     }
    
 }

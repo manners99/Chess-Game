@@ -8,6 +8,7 @@ public class Pawn extends Piece {
         } else {
             this.pieceName = "bP";
         }
+        this.pieceType = PieceType.PAWN;
     }
  
 }
