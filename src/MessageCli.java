@@ -25,5 +25,32 @@ public enum MessageCli {
     private MessageCli(final String message) {
         this.message = message;
     }
+
+    public String getMessage(final String... args) {
+        String tempMessage = this.message;
+
+        for (final String arg : args) {
+            tempMessage = tempMessage.replaceFirst("%s", arg);
+        }
+
+        return tempMessage;
+    }
+
+    public void printMessage(final String... args) {
+        System.out.println(this.getMessage(args));
+    }
+
+    public void printMessage() {
+        System.out.println(this.message);
+    }
+
+    public void print(String s) {
+        System.out.print(s);
+    }
+
+    @Override
+    public String toString() {
+        return this.message;
+    }
     
 }
