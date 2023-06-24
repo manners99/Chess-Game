@@ -22,7 +22,8 @@ public class Main {
         SAVE_GAME(0, "Save the current game"),
         RESIGN(1, "Resign <COLOUR_RESIGNING>"),
         DRAW(0, "Propose a draw to your opponent"),
-        EXIT(0, "Exit the terminal");
+        EXIT(0, "Exit the terminal"),
+        Help(0, "Display the help menu");
 
 
 
@@ -71,7 +72,43 @@ public class Main {
         new Main(new Chess()).run();
     }
 
+    /**
+     * This method is used to provide the user with a list of commands that they can use
+     * @return a string list that contains all of the commands available to the user
+     */
+     
+
+    private void displayHelp() {
+
+        final StringBuilder sb = new StringBuilder();
+
+        for (final Command command : Command.values()) {
+            //display the command
+            sb.append(command).append("\t");
+
+            //this adds a tab to the end of the command if it is less than 8 characters long
+            //ensureing that all the prompts line up
+            if (command.toString().length() < 8) {
+                sb.append("\t");
+            }
+
+            sb.append(" - ");
+
+            //display the number of arguments the command takes
+            if (command.hasArgs()) {
+                sb.append("<").append(command.getNumArgs()).append(" Arguments>");
+            } else {
+                sb.append("<No Arguments>");
+            }
+            
+            //display the message for the command
+            sb.append("\t").append(command.message).append("\n");
+        }
+
+    }
+
     private void run() {
+        //TODO: implement run method
     }
 
     private static void printBanner() {
